@@ -95,7 +95,7 @@ input[type="checkbox"]:checked::before{content: "\2713";background-color: #fff;p
 }
 .btn-res{
     width: 45%;
-    display: inline;
+    float: left;
     margin: 0 2.2%;
     height: 42px;
     font-size: 18px;
@@ -123,6 +123,8 @@ input[type="checkbox"]:checked::before{content: "\2713";background-color: #fff;p
 }
 .rule{
     width: 95%;
+    float: left;
     margin: 20px auto;
     font-size: 14px;
+    text-align: center;
 }

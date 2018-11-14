@@ -40,7 +40,7 @@ a:link{
 }
 
 a:hover,a:active{
-    color: #cd0606;
+    color: #ff6700;
 }
 
 .logo{
@@ -89,8 +89,18 @@ a:hover,a:active{
 .glyphicon-chevron-left{
     margin-left: 170px!important;
 }
+
+.gly1{
+    margin-left: -15px!important;
+}
+
 .item img{
     height: 520px!important;
+}
+
+.item1 img{
+    width: 100%;
+    height: auto!important;
 }
 
 .a0,.a00{
@@ -150,7 +160,6 @@ body.hc_list .hc_lnav .allbtn ul {
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
-    line-height: 25px;
     width: 100%;
     height: 35px;
     line-height: 35px;
@@ -256,31 +265,37 @@ body.hc_list .hc_lnav .allbtn ul {
 }
 
 .hc_lnav .allbtn ul li:hover dl {
-    color: #6e6e6e
+    color: #6e6e6e;
 }
 
 .hc_lnav .allbtn ul li:hover a {
-    color: #666666
+    color: #666666;
 }
 
 .hc_lnav .allbtn ul li:hover a:hover {
-    color: #cd0606
+    color: #ff6700;
 }
 
 .discount{
-    padding: 15px 0 55px;
+    padding: 15px 0 55px 15px;
+}
+
+.discount ul li{
+    display: inline-block;
+    margin: 0 14px 0 0;
 }
 
 .discount h3 a{
     float: right;
     font-size: 16px;
     line-height: 26px;
+    padding-right: 15px;
 }
 
 .dis_info {
     text-align: center;
     background: #fff;
-    width: 270px;
+    width: 272px;
     height: 360px;
     padding: 40px 0;
     margin-bottom: 20px;
@@ -319,8 +334,16 @@ body.hc_list .hc_lnav .allbtn ul {
     font-size: 14px;
 }
 
-.num_n{
-    color: #ff6700!important;
+.dis_info .num_n{
+    color: #ff6700;
+}
+
+.pages {
+    text-align: center;
+}
+
+.discount .pagination li{
+    margin: 0;
 }
 
 .bottom{
