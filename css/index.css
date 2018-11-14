@@ -87,10 +87,18 @@ a:hover,a:active{
 }
 
 .glyphicon-chevron-left{
-    margin-left: 175px!important;
+    margin-left: 170px!important;
 }
 .item img{
-    height: 450px!important;
+    height: 520px!important;
+}
+
+.a0,.a00{
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    font-size: 16px;
+    padding-left: 30px;
+    line-height: 40px;
 }
 
 /* hc_lnav */
@@ -112,7 +120,6 @@ a:hover,a:active{
     background-color: rgba(0,0,0,0.6);
     width: 190px;
     display: block;/*可以设置菜单是显示还是隐藏   display：none；为隐藏*/
-    padding: 15px 0;
 }
 
 body.hc_home .hc_lnav .allbtn ul {
@@ -135,7 +142,7 @@ body.hc_list .hc_lnav .allbtn ul {
     height: 35px;
 }
 
-.hc_lnav .allbtn ul li .tx a {
+.hc_lnav .allbtn ul li .tx {
     font-family: 微软雅黑, 黑体, serif;
     color: #ffffff;
     font-size: 14px;
@@ -143,17 +150,16 @@ body.hc_list .hc_lnav .allbtn ul {
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
+    line-height: 25px;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 35px;
+    text-decoration: none;
 }
 
-.hc_lnav .allbtn ul li .tx a i {
-    line-height: 25px;
-    margin-top: 5px;
-    width: 25px;
-    background-position: 0 0;
-    float: left;
-    height: 25px;
-    margin-right: 10px;
-    text-decoration: none
+.hc_lnav .allbtn ul li .tx:hover {
+    color: #666666;
 }
 
 .hc_lnav .allbtn ul li dl {
@@ -174,25 +180,23 @@ body.hc_list .hc_lnav .allbtn ul {
     transition: color 0.2s;
 }
 
-.hc_lnav .allbtn ul li dd {
-    line-height: 22px;
-    width: 150px;
-    float: left;
-    padding-top: 2px
-}
-
 .hc_lnav .allbtn ul li .pop {
     position: absolute;
     background-color: #fcfcfc;
     width: 552px;
     display: none;
-    height: 450px;
+    overflow: auto;
+    height: 520px;
     top: 0;
     padding: 10px 30px;
     left: 190px;
     box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
     -webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hc_lnav .allbtn ul li .pop1 {
+    width: 570px;
 }
 
 .hc_lnav .allbtn ul li .pop dl {
@@ -202,7 +206,7 @@ body.hc_list .hc_lnav .allbtn ul {
 }
 
 .hc_lnav .allbtn ul li .pop dl:hover {
-    background-color: #f3f3f3
+    background-color: #EAEAEA;
 }
 
 .hc_lnav .allbtn ul li .pop dl p{
@@ -213,28 +217,11 @@ body.hc_list .hc_lnav .allbtn ul {
 .hc_lnav .allbtn ul li .pop dl a {
     color: #666666;
     font-size: 14px;
-    margin-left: 12px;
-    margin-right: 12px;
+    padding: 0 12px;
 }
 
 .hc_lnav .allbtn ul li .pop dl a img{
     padding-top: 5px;
-}
-
-.hc_lnav .allbtn ul li .pop dl a.un {
-    color: #a5a5a5
-}
-
-
-.hc_lnav .allbtn ul li .pop dd {
-    width: 565px;
-}
-
-.hc_lnav .allbtn ul li .pop .act {
-    width: 640px;
-    height: 80px;
-    overflow: hidden;
-    padding-top: 10px
 }
 
 .hc_lnav .allbtn:hover ul {
@@ -311,20 +298,29 @@ body.hc_list .hc_lnav .allbtn ul {
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
 }
 
-.dis_info a {
+.dis_info h4{
     font-size: 14px;
+    padding: 10px 0 0;
     font-weight: 400;
     color: #000;
 }
 
-.dis_info a:hover {
+.dis_info h4:hover {
     color: #666666;
     -webkit-transition: all .2s linear;
     transition: all .2s ease-out;
 }
 
+.dis_info span{
+    color: #666666;
+}
+
+.dis_info p {
+    font-size: 14px;
+}
+
 .num_n{
-    color: ;
+    color: #ff6700!important;
 }
 
 .bottom{

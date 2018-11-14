@@ -122,7 +122,7 @@ input[type="checkbox"]:checked::before{content: "\2713";background-color: #fff;p
     color: #555;
 }
 .rule{
-    width: 89%;
+    width: 95%;
     margin: 20px auto;
-    font-size: 16px;
+    font-size: 14px;
 }
