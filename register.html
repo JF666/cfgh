@@ -4,13 +4,16 @@
     <title>CFGH游戏交易平台</title>
     <meta charset="utf-8" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <script type="text/JavaScript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/res.js"></script>
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="container">
+    <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column logo">
             <a href="index.html"><img src="img/logo.png" alt="logo"></a>
@@ -22,7 +25,10 @@
         <div class="col-md-4 column res-box">
             <form class="form-horizontal" role="form">
                 <div class="input-group">
-                    <input type="email" class="Input" placeholder="邮箱" id="inputEmail3" autocomplete="off" />
+                    <input type="text" class="Input" placeholder="用户名" id="inputUser"  autocomplete="off" />
+                </div>
+                <div class="input-group">
+                    <input type="text" class="Input" placeholder="手机号" id="inputEmail3" autocomplete="off" />
                 </div>
                 <div class="input-group">
                     <input type="password" class="Input" placeholder="密码" id="inputPassword3" />
@@ -35,7 +41,7 @@
                         <div class="col-sm-1">
                         </div>
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary btn-res">注册</button>
+                            <button type="button" class="btn btn-primary btn-res" id="btn-res" onclick="res()">注册</button>
                             <a href="login.html"><button type="button" class="btn btn-primary btn-res">返回登录</button></a>
                             <p class="rule">注册即代表您同意并遵守<a href="#">《CFGH用户协议》</a></p>
                         </div>
@@ -63,5 +69,31 @@
         </div>
     </div>
 </div>
+    <script>
+        $("#inputUser").mouseout(function() {
+            var user=$("#inputUser").val();
+            if(user){
+                $.ajax({
+                    url: "http://www.cspy.online:8080/test/valid_user",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: {username:user},
+                    success: function (response) {
+                        if(response.code==100){
+                            $("#inputUser").css("color","#FF0000");
+                            $("#inputUser").css("font-weight","bold");
+                            $("#inputUser").css("border-color","#FF0000");
+                        }
+                        else{
+                            $("#inputUser").css("color","green");
+                            $("#inputUser").css("font-weight","bold");
+                            $("#inputUser").css("border-color","green");
+                        }
+                    },error: function () {
+                    }
+                })
+            }
+        })
+    </script>
 </body>
 </html>

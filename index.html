@@ -4,9 +4,12 @@
     <title>CFGH游戏交易平台</title>
     <meta charset="utf-8" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
     <script type="text/JavaScript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
     <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
@@ -23,16 +26,10 @@
                                 <a href="#">首页</a>
                             </li>
                             <li>
-                                <a href="discount.html">优惠闪购</a>
-                            </li>
-                            <li>
-                                <a href="products.html">所有宝贝</a>
-                            </li>
-                            <li>
-                                <a href="#">购物车</a>
+                                <a href="#" onclick="cart();return false;">购物车</a>
                             </li>
                         </ul>
-                        <ul class="navbar-nav navbar-right">
+                        <ul class="navbar-nav navbar-right user">
                             <li>
                                 <a href="login.html">登录</a>
                             </li>
@@ -51,199 +48,123 @@
                         <div class="allbtn">
                             <ul class="jspop box">
                                 <p class="a0">原始人物</p>
-                                <li class="a1">
-                                    <div class="tx">琪亚娜</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">琪亚娜</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p>
-                                                    <a href="#"><img src="img/游侠.jpg" alt="游侠" width="140" height="173"><br>女武神·游侠</a>
-                                                </p>
-                                                <p>
-                                                    <a href="#"><img src="img/白练.jpg" alt="白练" width="140" height="173"><br>领域装·白练</a>
-                                                </p>
-                                                <p>
-                                                    <a href="#"><img src="img/圣女祈祷.jpg" alt="圣女祈祷" width="140" height="173"><br>圣女祈祷</a>
-                                                </p>
-                                                <p>
-                                                    <a href="#"><img src="img/月光.jpg" alt="月光" width="140" height="173"><br>白骑士·月光</a>
-                                                </p>
-                                                <p>
-                                                    <a href="#"><img src="img/空之律者.jpg" alt="空之律者" width="140" height="173"><br>空之律者</a>
-                                                </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a2">
-                                    <div class="tx">芽衣</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">芽衣</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/强袭.jpg" alt="强袭" width="140" height="173"><br>女武神·强袭</a> </p>
-                                                <p> <a href="#"><img src="img/绯红.jpg" alt="绯红" width="140" height="173"><br>脉冲装·绯红</a> </p>
-                                                <p> <a href="#"><img src="img/影舞冲击.jpg" alt="影舞冲击" width="140" height="173"><br>影舞冲击</a> </p>
-                                                <p> <a href="#"><img src="img/雷电女王的鬼铠.jpg" alt="雷电女王的鬼铠" width="140" height="173"><br>雷电女王的鬼铠</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a3">
-                                    <div class="tx">布洛妮娅</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">布洛妮娅</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/战车.jpg" alt="战车" width="140" height="173"><br>女武神·战车</a> </p>
-                                                <p> <a href="#"><img src="img/山吹.jpg" alt="山吹" width="140" height="173"><br>驱动装·山吹</a> </p>
-                                                <p> <a href="#"><img src="img/雪地狙击.jpg" alt="雪地狙击" width="140" height="173"><br>雪地狙击</a> </p>
-                                                <p> <a href="#"><img src="img/次元边界突破.jpg" alt="次元边界突破" width="140" height="173"><br>次元边界突破</a> </p>
-                                                <p> <a href="#"><img src="img/银狼的黎明.jpg" alt="银狼的黎明" width="140" height="173"><br>银狼的黎明</a> </p>
-                                                <p> <a href="#"><img src="img/异度黑核侵蚀.jpg" alt="异度黑核侵蚀" width="140" height="173"><br>异度黑核侵蚀</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a4">
-                                    <div class="tx">姬子</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">姬子</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/战场疾风.jpg" alt="战场疾风" width="140" height="173"><br>战场疾风</a> </p>
-                                                <p> <a href="#"><img src="img/深红.jpg" alt="深红" width="140" height="173"><br>融核装·深红</a> </p>
-                                                <p> <a href="#"><img src="img/凯旋.jpg" alt="凯旋" width="140" height="173"><br>女武神·凯旋</a> </p>
-                                                <p> <a href="#"><img src="img/血色玫瑰.jpg" alt="血色玫瑰" width="140" height="173"><br>血色玫瑰</a> </p>
-                                                <p> <a href="#"><img src="img/极地战刃.jpg" alt="极地战刃" width="140" height="173"><br>极地战刃</a> </p>
-                                                <p> <a href="#"><img src="img/月蚀.jpg" alt="月蚀" width="140" height="173"><br>真红骑士·月蚀</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a5">
-                                    <div class="tx">八重樱</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">八重樱</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/逆神巫女.jpg" alt="逆神巫女" width="140" height="173"><br>逆神巫女</a> </p>
-                                                <p> <a href="#"><img src="img/勿忘.jpg" alt="勿忘" width="140" height="173"><br>御神装·勿忘</a> </p>
-                                                <p> <a href="#"><img src="img/真炎幸魂.jpg" alt="真炎幸魂" width="140" height="173"><br>真炎幸魂</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a6">
-                                    <div class="tx">德丽莎</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">德莉莎</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/誓约.jpg" alt="誓约" width="140" height="173"><br>女武神·誓约</a> </p>
-                                                <p> <a href="#"><img src="img/紫苑.jpg" alt="紫苑" width="140" height="173"><br>处刑装·紫苑</a> </p>
-                                                <p> <a href="#"><img src="img/樱火轮舞.jpg" alt="樱火轮舞" width="140" height="173"><br>樱火轮舞</a> </p>
-                                                <p> <a href="#"><img src="img/神恩颂歌.jpg" alt="神恩颂歌" width="140" height="173"><br>神恩颂歌</a> </p>
-                                                <p> <a href="#"><img src="img/月下初拥.jpg" alt="月下初拥" width="140" height="173"><br>月下初拥</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a7">
-                                    <div class="tx">卡莲</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">卡莲</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/今样.jpg" alt="今样" width="140" height="173"><br>圣仪装·今样</a> </p>
-                                                <p> <a href="#"><img src="img/第六夜想曲.jpg" alt="第六夜想曲" width="140" height="173"><br>第六夜想曲</a> </p>
-                                                <p> <a href="#"><img src="img/原罪猎人.jpg" alt="原罪猎人" width="140" height="173"><br>原罪猎人</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a8">
-                                    <div class="tx">符华</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">符华</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p> <a href="#"><img src="img/迅羽.jpg" alt="迅羽" width="140" height="173"><br>女武神·迅羽</a> </p>
-                                                <p> <a href="#"><img src="img/月轮.jpg" alt="月轮" width="140" height="173"><br>影骑士·月轮</a> </p>
-                                                <p> <a href="#"><img src="img/炽翎.jpg" alt="炽翎" width="140" height="173"><br>炽翎</a> </p>
-                                                <p> <a href="#"><img src="img/白夜执事.jpg" alt="白夜执事" width="140" height="173"><br>白夜执事</a> </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a9">
-                                    <div class="tx">洛丝薇瑟</div>
+                                <li class="original">
+                                    <div class="tx" onmouseover="over(this)">洛丝薇瑟</div>
                                     <div class="pop">
                                         <dl>
                                             <dd>
-                                                <p>
-                                                    <a href="#">
-                                                        <img src="img/黯蔷薇.jpg" alt="黯蔷薇" width="140" height="173">
-                                                        <br>黯蔷薇
-                                                    </a>
-                                                </p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
                                 <p class="a00">属性</p>
-                                <li class="a10">
-                                    <div class="tx">机械属性</div>
-                                    <div class="pop pop1">
+                                <li class="type">
+                                    <div class="tx" onmouseover="over(this)">机械</div>
+                                    <div class="pop pop_1">
                                         <dl>
                                             <dd>
-                                                <p><a href="#"><img src="img/游侠.jpg" alt="游侠" width="140" height="173"><br>女武神·游侠</a></p>
-                                                <p><a href="#"><img src="img/白练.jpg" alt="白练" width="140" height="173"><br>领域装·白练</a></p>
-                                                <p><a href="#"><img src="img/影舞冲击.jpg" alt="影舞冲击" width="140" height="173"><br>影舞冲击</a></p>
-                                                <p><a href="#"><img src="img/次元边界突破.jpg" alt="次元边界突破" width="140" height="173"><br>次元边界突破</a></p>
-                                                <p><a href="#"><img src="img/深红.jpg" alt="深红" width="140" height="173"><br>融核装·深红</a></p>
-                                                <p><a href="#"><img src="img/勿忘.jpg" alt="勿忘" width="140" height="173"><br>御神装·勿忘</a></p>
-                                                <p><a href="#"><img src="img/紫苑.jpg" alt="紫苑" width="140" height="173"><br>处刑装·紫苑</a></p>
-                                                <p><a href="#"><img src="img/今样.jpg" alt="今样" width="140" height="173"><br>圣仪装·今样</a></p>
-                                                <p><a href="#"><img src="img/月轮.jpg" alt="月轮" width="140" height="173"><br>影骑士·月轮</a></p>
-                                                <p><a href="#"><img src="img/月蚀.jpg" alt="月蚀" width="140" height="173"><br>真红骑士·月蚀</a></p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a11">
-                                    <div class="tx">异能属性</div>
-                                    <div class="pop pop1">
+                                <li class="type">
+                                    <div class="tx" onmouseover="over(this)">异能</div>
+                                    <div class="pop pop_1">
                                         <dl>
                                             <dd>
-                                                <p><a href="#"><img src="img/圣女祈祷.jpg" alt="圣女祈祷" width="140" height="173"><br>圣女祈祷</a></p>
-                                                <p><a href="#"><img src="img/雷电女王的鬼铠.jpg" alt="雷电女王的鬼铠" width="140" height="173"><br>雷电女王的鬼铠</a></p>
-                                                <p><a href="#"><img src="img/战车.jpg" alt="战车" width="140" height="173"><br>女武神·战车</a></p>
-                                                <p><a href="#"><img src="img/山吹.jpg" alt="山吹" width="140" height="173"><br>驱动装·山吹</a></p>
-                                                <p><a href="#"><img src="img/血色玫瑰.jpg" alt="血色玫瑰" width="140" height="173"><br>血色玫瑰</a></p>
-                                                <p><a href="#"><img src="img/誓约.jpg" alt="誓约" width="140" height="173"><br>女武神·誓约</a></p>
-                                                <p><a href="#"><img src="img/樱火轮舞.jpg" alt="樱火轮舞" width="140" height="173"><br>樱火轮舞</a></p>
-                                                <p><a href="#"><img src="img/银狼的黎明.jpg" alt="银狼的黎明" width="140" height="173"><br>银狼的黎明</a></p>
-                                                <p><a href="#"><img src="img/迅羽.jpg" alt="迅羽" width="140" height="173"><br>女武神·迅羽</a></p>
-                                                <p><a href="#"><img src="img/炽翎.jpg" alt="炽翎" width="140" height="173"><br>炽翎</a></p>
-                                                <p><a href="#"><img src="img/第六夜想曲.jpg" alt="第六夜想曲" width="140" height="173"><br>第六夜想曲</a></p>
-                                                <p><a href="#"><img src="img/极地战刃.jpg" alt="极地战刃" width="140" height="173"><br>极地战刃</a></p>
-                                                <p><a href="#"><img src="img/黯蔷薇.jpg" alt="黯蔷薇" width="140" height="173"><br>黯蔷薇</a></p>
+
                                             </dd>
                                         </dl>
                                     </div>
                                 </li>
-                                <li class="a12">
-                                    <div class="tx">生物属性</div>
-                                    <div class="pop pop1">
+                                <li class="type">
+                                    <div class="tx" onmouseover="over(this)">生物</div>
+                                    <div class="pop pop_1">
                                         <dl>
                                             <dd>
-                                                <p><a href="#"><img src="img/月光.jpg" alt="月光" width="140" height="173"><br>白骑士·月光</a></p>
-                                                <p><a href="#"><img src="img/强袭.jpg" alt="强袭" width="140" height="173"><br>女武神·强袭</a></p>
-                                                <p><a href="#"><img src="img/绯红.jpg" alt="绯红" width="140" height="173"><br>脉冲装·绯红</a></p>
-                                                <p><a href="#"><img src="img/雪地狙击.jpg" alt="雪地狙击" width="140" height="173"><br>雪地狙击</a></p>
-                                                <p><a href="#"><img src="img/战场疾风.jpg" alt="战场疾风" width="140" height="173"><br>战场疾风</a></p>
-                                                <p><a href="#"><img src="img/凯旋.jpg" alt="凯旋" width="140" height="173"><br>女武神·凯旋</a></p>
-                                                <p><a href="#"><img src="img/逆神巫女.jpg" alt="逆神巫女" width="140" height="173"><br>逆神巫女</a></p>
-                                                <p><a href="#"><img src="img/真炎幸魂.jpg" alt="真炎幸魂" width="140" height="173"><br>真炎幸魂</a></p>
-                                                <p><a href="#"><img src="img/神恩颂歌.jpg" alt="神恩颂歌" width="140" height="173"><br>神恩颂歌</a></p>
-                                                <p><a href="#"><img src="img/异度黑核侵蚀.jpg" alt="异度黑核侵蚀" width="140" height="173"><br>异度黑核侵蚀</a></p>
-                                                <p><a href="#"><img src="img/白夜执事.jpg" alt="白夜执事" width="140" height="173"><br>白夜执事</a></p>
-                                                <p><a href="#"><img src="img/月下初拥.jpg" alt="月下初拥" width="140" height="173"><br>月下初拥</a></p>
-                                                <p><a href="#"><img src="img/空之律者.jpg" alt="空之律者" width="140" height="173"><br>空之律者</a></p>
+
                                             </dd>
                                         </dl>
                                     </div>
@@ -301,113 +222,32 @@
             <div class="col-md-12 column discount">
                 <h3>
                     优惠闪购
-                    <a href="">更多>></a>
                 </h3>
-                <ul>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <div class="dis_info">
-                                <img alt="白练" src="img/白练.jpg" width="160" /><br><h4>白练</h4>
-                                <span>各位舰长登舰后指挥的第一位「女武神」</span>
-                                <p class="price">
-                                    <span class="num_n">40元</span>
-                                    <del><span class="num_o">50元</span></del>
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <div class="discount1"></div>
+                <div class="pages">
+                    <ul class="pagination page1">
+                    </ul>
+                </div>
             </div>
         </div>
+        <div class="row clearfix">
+            <div class="col-md-12 column products">
+                <h3>
+                    所有商品
+                </h3>
+                <div class="products1"></div>
+                <div class="pages">
+                    <ul class="pagination page2">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
     <div class="row clearfix bottom">
         <div class="col-md-2 column">
         </div>
-        <div class="col-md-8 column">
+        <div class="col-md-8 column bottom_info">
             <p><strong>健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。</strong></p>
             <p><b>用户协议： 交易纠纷处理   家长监护工程   防沉迷系统   自律公约</b></p>
             <p><b>适龄提示： 本游戏适合17岁（含）以上玩家娱乐</b></p>
